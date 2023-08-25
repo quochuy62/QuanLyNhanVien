@@ -124,8 +124,8 @@
 						<div class="row mb-3">
 							<div class="col">
 								<div class="input-group">
-									<input type="text" class="form-control" placeholder="Loại nhân viên" id="searchName">
-									<div class="input-group-prepend">
+									<input type="text" class="form-control" placeholder="Loại nhân viên" id="searchName" onchange="search()">
+									<div class="input-group-prepend" onclick="search()">
 										<span class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i></span>
 									</div>
 								</div>
@@ -264,9 +264,9 @@
 								</div>
 								<select class="form-control" id="chucvu">
 									<option>Chọn chức vụ</option>
-									<option>Sếp</option>
-									<option>Trưởng phòng</option>
-									<option>Nhân viên</option>
+									<option value="sep">Sếp</option>
+									<option value="truongphong">Trưởng phòng</option>
+									<option value="nhanvien">Nhân viên</option>
 								</select>
 							</div>
 
@@ -288,8 +288,8 @@
 
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
-					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
-					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
+					<button id="btnThemNV" type="button" class="btn btn-success" onclick="themNhanVien()">Thêm nhân viên</button>
+					<button id="btnCapNhat" type="button" class="btn btn-success" onclick="capNhatSV()">Cập nhật</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
 
@@ -302,7 +302,13 @@
 	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="./js/NhanVien.js"></script>
+	<script src="./js/danhSachNhanVien.js"></script>
+	<script src="./js/Validation.js"></script>
+
 	<script src="./js/main.js"></script>
+
+
 
 	<!-- Date Picker -->
 	<!-- <script src="js/jquery-ui.min.js"></script> -->
